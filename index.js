@@ -28,9 +28,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/images/index.html");
-})
+
 
 app.post("/api/login", async (req, res) => {
     await login(req, res, db);
